@@ -10,9 +10,7 @@ jobs:
 
     - name: Node 10.7.0
       uses: actions/setup-node@v1
-      with:
-        node-version: 10.7.0
     - name: npm ci and npm run test
       run: |
         npm ci
-        npm run build:ci
+        npm run test
