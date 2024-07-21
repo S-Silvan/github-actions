@@ -1,0 +1,16 @@
+name: push-action
+
+on: [push]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Node 10.7.0
+      uses: actions/setup-node@v1
+    - name: npm ci and npm run test
+      run: |
+        npm ci
+        npm run test
