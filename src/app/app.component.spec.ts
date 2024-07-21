@@ -11,13 +11,13 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
+    expect(app).toBeFalsy();
   });
 
   it(`should have the 'github-actions' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('github-actions');
+    expect(app.title).toEqual('github-actions-blue');
   });
 
   it('should render title', () => {
