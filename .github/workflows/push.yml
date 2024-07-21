@@ -13,4 +13,4 @@ jobs:
     - name: npm ci and npm run test
       run: |
         npm ci
-        npm run test
+        npm test -- --watch=false --browsers=ChromeHeadless
