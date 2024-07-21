@@ -5,23 +5,14 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-    uses: 
     steps:
     - uses: actions/checkout@v1
-    
-    - name: Cache node modules
-    uses: actions/cache@v1
-    with:
-      path: ~/.npm
-      key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-      restore-keys: |
-        ${{ runner.os }}-node-
 
-  - name: Node 10.7.0
-    uses: actions/setup-node@v1
-    with:
-      node-version: 10.7.0
-  - name: npm ci and npm run test
-    run: |
-      npm ci
-      npm run build:ci
+    - name: Node 10.7.0
+      uses: actions/setup-node@v1
+      with:
+        node-version: 10.7.0
+    - name: npm ci and npm run test
+      run: |
+        npm ci
+        npm run build:ci
